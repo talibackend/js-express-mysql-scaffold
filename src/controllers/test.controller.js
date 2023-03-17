@@ -5,7 +5,7 @@ module.exports = {
         const { body } = req;
 
         try{
-
+            let payload = helloValidation(body);
         }catch(error){
             
         }
