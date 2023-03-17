@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const validator = require('../validator');
+const validator = require('@src/utils/validator');
 
 module.exports = {
     helloValidation : (body)=>{
