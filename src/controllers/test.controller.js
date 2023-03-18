@@ -1,7 +1,7 @@
 const { helloValidation } = require('../utils/validations/test.validations.js');
 
 module.exports = {
-    hello : (req, res)=>{
+    hello : async (req, res)=>{
         const { body } = req;
 
         try{
