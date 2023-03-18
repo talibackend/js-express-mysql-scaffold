@@ -7,7 +7,8 @@ module.exports = {
         try{
             let payload = helloValidation(body);
         }catch(error){
-            
+            console.error(error);
+            return res.status(error.status).json({...error});
         }
     }
 }
