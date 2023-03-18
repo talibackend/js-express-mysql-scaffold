@@ -1,4 +1,4 @@
-const { helloValidation } = require('@src/utils/validations/test.validations.js');
+const { helloValidation } = require('../utils/validations/test.validations.js');
 
 module.exports = {
     hello : (req, res)=>{
