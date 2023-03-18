@@ -1,7 +1,7 @@
 const winston = require('winston');
 const path = require('path');
 
-export default logger = winston.createLogger({
+logger = winston.createLogger({
     transports : []
 });
 
@@ -11,3 +11,5 @@ logger.add(new winston.transports.File({ filename : path.resolve(__dirname, '../
 if(process.env.NODE_ENV != 'production'){
     logger.add(new winston.transports.Console());
 }
+
+module.exports = logger;

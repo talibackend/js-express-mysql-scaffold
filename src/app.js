@@ -5,6 +5,9 @@ const http = require('http');
 const server = http.createServer(app);
 const cors = require('cors');
 
+//Middleware Importation
+const { logRequest } = require('./middlewares/general.middleware');
+
 //Models Importation
 const User = require('./models/user.model');
 
@@ -20,6 +23,7 @@ database.sync({ alter : true }).then(()=>{
     app.listen(process.env.PORT, ()=>{ console.log(`Server running on :${process.env.PORT}`) });
 }).catch(err=>{ console.error(err); });
 
+app.use(logRequest);
 app.use('/test', testRoutes);
 
 
